@@ -4,7 +4,7 @@ namespace wcf\action;
 use Laminas\Diactoros\Response\JsonResponse;
 use wcf\system\cache\builder\KasMailCacheBuilder;
 
-class KasMailListResetAction extends AbstractSecureAction {
+class KasMailListResetAction extends AbstractAction {
     /**
      * @inheritDoc
      */
