@@ -3,6 +3,7 @@
 namespace wcf\acp\form;
 
 use wcf\form\AbstractFormBuilderForm;
+use wcf\system\cache\builder\KasMailCacheBuilder;
 use wcf\system\event\EventHandler;
 use wcf\system\form\builder\container\FormContainer;
 use wcf\system\form\builder\field\BooleanFormField;
@@ -141,5 +142,15 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ])
             );
         }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function saved()
+    {
+        parent::saved();
+
+        KasMailCacheBuilder::getInstance()->reset();
     }
 }

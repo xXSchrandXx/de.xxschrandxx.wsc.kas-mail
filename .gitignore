@@ -2,3 +2,4 @@ node_modules/
 files/js/
 *.tar
 *.tar.gz
+package-lock.json

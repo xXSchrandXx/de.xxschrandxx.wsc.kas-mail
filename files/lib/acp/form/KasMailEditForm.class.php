@@ -2,7 +2,7 @@
 
 namespace wcf\acp\form;
 
-class KasMailAddForm extends KasMailAddForm
+class KasMailEditForm extends KasMailAddForm
 {
     /**
      * @inheritDoc

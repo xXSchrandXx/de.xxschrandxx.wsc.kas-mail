@@ -3,12 +3,12 @@
 namespace wcf\acp\page;
 
 use wcf\page\AbstractPage;
+use wcf\system\cache\builder\KasMailCacheBuilder;
 use wcf\system\kas\KasApi;
 use wcf\system\WCF;
 
 class KasMailPage extends AbstractPage
 {
-    protected $kasApi;
     protected $mails;
 
     /**
@@ -16,12 +16,7 @@ class KasMailPage extends AbstractPage
      */
     public function readParameters()
     {
-        $this->kasApi = new KasApi();
-        try {
-            $this->mails = $this->kasApi->get_mailaccounts();
-        } catch (\KasApi\KasApiException $e) {
-            // TODO
-        }
+        $this->mails = KasMailCacheBuilder::getInstance()->getData();
     }
 
     /**

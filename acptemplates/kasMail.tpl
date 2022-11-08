@@ -1,18 +1,26 @@
 {include file='header' pageTitle='wcf.acp.page.kasMail.title'}
 
 <header class="contentHeader">
-    <div class="contentHeaderTitle">
-        <h1 class="contentTitle">{lang}wcf.acp.page.kasMail.title{/lang}</h1>
-    </div>
+	<div class="contentHeaderTitle">
+		<h1 class="contentTitle">{lang}wcf.acp.page.kasMail.title{/lang}</h1>
+	</div>
 
-    <nav class="contentHeaderNavigation">
-        <ul>
-            <li><a href="{link controller='KasMailAdd'}{/link}" class="button"><span
-                        class="icon icon16 fa-plus"></span>
-                    <span>{lang}wcf.acp.form.kasMail.title.add{/lang}</span></a></li>
-            {event name='contentHeaderNavigation'}
-        </ul>
-    </nav>
+	<nav class="contentHeaderNavigation">
+		<ul>
+			<li>
+				<a href="#" id="jsKasMailResetListButton" class="button">
+					<span class="icon icon16 fa-rotate-right"></span>
+				</a>
+			</li>
+			<li>
+				<a href="{link controller='KasMailAdd'}{/link}" class="button">
+					<span class="icon icon16 fa-plus"></span>
+					<span>{lang}wcf.acp.form.kasMail.title.add{/lang}</span>
+				</a>
+			</li>
+			{event name='contentHeaderNavigation'}
+		</ul>
+	</nav>
 </header>
 
 {if $mails|count}
@@ -47,5 +55,12 @@
 {else}
 	<p class="info">{lang}wcf.global.noItems{/lang}</p>
 {/if}
+
+
+<script data-relocate="true">
+require(["xXSchrandXx/Kas/KasMailResetList",], function(KasMailResetList) {
+	KasMailResetList.addEventListener();
+});
+</script>
 
 {include file='footer'}
