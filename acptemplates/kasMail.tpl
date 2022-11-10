@@ -6,20 +6,8 @@
 	</div>
 
 	<nav class="contentHeaderNavigation">
-		<ul>
-			<li>
-				<a href="#" id="jsKasMailResetListButton" class="button">
-					<span class="icon icon16 fa-rotate-right"></span>
-				</a>
-			</li>
-			<li>
-				<a href="{link controller='KasMailAdd'}{/link}" class="button">
-					<span class="icon icon16 fa-plus"></span>
-					<span>{lang}wcf.acp.form.kasMail.title.add{/lang}</span>
-				</a>
-			</li>
-			{event name='contentHeaderNavigation'}
-		</ul>
+		{include file='__kasMailResetButtons'}
+		{event name='contentHeaderNavigation'}
 	</nav>
 </header>
 
@@ -56,11 +44,11 @@
 	<p class="info">{lang}wcf.global.noItems{/lang}</p>
 {/if}
 
-
-<script data-relocate="true">
-	require(["xXSchrandXx/Kas/KasMailResetList",], function(KasMailResetList) {
-		KasMailResetList.default('jsKasMailResetListButton');
-	});
-</script>
+<footer class="contentFooter">
+	<nav class="contentFooterNavigation">
+		{include file='__kasMailResetButtons'}
+		{event name='contentFooterNavigation'}
+	</nav>
+</footer>
 
 {include file='footer'}
