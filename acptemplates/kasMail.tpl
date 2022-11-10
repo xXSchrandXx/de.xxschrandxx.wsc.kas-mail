@@ -58,9 +58,9 @@
 
 
 <script data-relocate="true">
-require(["xXSchrandXx/Kas/KasMailResetList",], function(KasMailResetList) {
-	KasMailResetList.addEventListener();
-});
+	require(["xXSchrandXx/Kas/KasMailResetList",], function(KasMailResetList) {
+		KasMailResetList.default('jsKasMailResetListButton');
+	});
 </script>
 
 {include file='footer'}
