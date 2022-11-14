@@ -18,6 +18,10 @@ class KasMailPage extends AbstractPage
      */
     public $neededPermission = ['admin.kas.canManageMails'];
 
+    /**
+     * List of cached mails
+     * @var array
+     */
     protected $mails;
 
     /**
