@@ -191,8 +191,14 @@ class KasMailAddForm extends AbstractFormBuilderForm
         }
         $formData['data'] = \array_merge($this->additionalFields, $formData['data']);
 
-        if ($this->formAction === 'edit' && empty($formData['data']['mail_password'])) {
-            $formData['data']['mail_password'] = $this->formObject['mail_password'];
+        if ($this->formAction === 'edit') {
+            $formData['data']['mail_login'] = $this->formObject['mail_login'];
+            if (empty($formData['data']['mail_password'])) {
+                $formData['data']['mail_new_password'] = $this->formObject['mail_password'];
+            } else {
+                $formData['data']['mail_new_password'] = $formData['data']['mail_password'];
+            }
+            unset($formData['data']['mail_password']);
         }
 
         foreach (['mail_responder_displayname', 'responder_text', 'copy_adress', 'mail_sender_alias'] as $entry) {
@@ -203,7 +209,11 @@ class KasMailAddForm extends AbstractFormBuilderForm
 
         try {
             $kasAPI = new KasApi();
-            $kasAPI->add_mailaccount($formData['data']);
+            if ($this->formAction === 'create') {
+                $kasAPI->add_mailaccount($formData['data']);
+            } else {
+                $kasAPI->update_mailaccount($formData['data']);
+            }
         } catch (\KasApi\KasApiException $e) {
             WCF::getTPL()->assign([
                 'faultCode' => $e->getFaultcode(),
