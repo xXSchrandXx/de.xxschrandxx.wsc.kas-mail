@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="https://www.woltlab.com"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/5.5/acpMenu.xsd">
+	<import>
+		<acpmenuitem name="wcf.acp.menu.link.configuration.kas.kasMailPage">
+			<controller>wcf\acp\page\KasMailPage</controller>
+			<parent>wcf.acp.menu.link.configuration.kas</parent>
+			<permissions>admin.kas.canManageMails</permissions>
+		</acpmenuitem>
+		<acpmenuitem name="wcf.acp.menu.link.configuration.kas.kasMailAddForm">
+			<controller>wcf\acp\page\KasMailPage</controller>
+			<parent>wcf.acp.menu.link.configuration.kas.kasMailPage</parent>
+			<permissions>admin.kas.canManageMails</permissions>
+			<icon>fa-plus</icon>
+		</acpmenuitem>
+	</import>
+</data>
