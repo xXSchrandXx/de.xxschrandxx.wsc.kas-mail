@@ -26,7 +26,7 @@
 				{foreach from=$mails item=mail}
 					<tr>
 						<td class="columnIcon">
-							<a href="{link controller='KasMailEdit' id=$mail['mail_login']}{/link}"
+							<a href="{link controller='KasMailEdit' mail_login=$mail['mail_login']}{/link}"
 								title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
 								<span class="icon icon16 fa-pencil"></span>
 							</a>
