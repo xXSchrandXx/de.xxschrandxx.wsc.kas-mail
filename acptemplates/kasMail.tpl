@@ -31,6 +31,8 @@
 								<span class="icon icon16 fa-pencil"></span>
 							</a>
 							<a 
+								title="{lang}wcf.global.button.delete{/lang}" 
+								class="jsTooltip" 
 								onclick="
 									WCF.System.Confirmation.show('{jslang}wcf.acp.kasMail.delete.sure{/jslang}', $.proxy(function (action) {
 										if (action == 'confirm')
@@ -38,9 +40,8 @@
 									}, this));
 									return false;
 								" 
-								href="{link controller='KasMailDeleteAction' mail_login=$mail['mail_login']}{/link}" class="button">
+								href="{link controller='KasMailDeleteAction' mail_login=$mail['mail_login']}{/link}">
 									<span class="icon icon16 fa-times"></span>
-									<span>{lang}wcf.acp.kasMail.button.delete{/lang}</span>
 							</a>
 							{event name='rowButtons'}
 						</td>
