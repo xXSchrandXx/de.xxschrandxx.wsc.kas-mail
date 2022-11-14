@@ -172,7 +172,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
 
         $parameters = [];
         if (isset($this->formObject)) {
-            $parameters['id'] = $this->formObject['mail_login'];
+            $parameters['mail_login'] = $this->formObject['mail_login'];
         }
         $this->form->action(LinkHandler::getInstance()->getControllerLink(static::class, $parameters));
     }
@@ -225,16 +225,6 @@ class KasMailAddForm extends AbstractFormBuilderForm
         $this->saved();
 
         WCF::getTPL()->assign('success', true);
-
-        if ($this->formAction === 'create' && $this->objectEditLinkController) {
-            WCF::getTPL()->assign(
-                'objectEditLink',
-                LinkHandler::getInstance()->getControllerLink($this->objectEditLinkController, [
-                    'application' => $this->objectEditLinkApplication,
-                    'id' => $this->objectAction->getReturnValues()['returnValues']->getObjectID(),
-                ])
-            );
-        }
     }
 
     /**
