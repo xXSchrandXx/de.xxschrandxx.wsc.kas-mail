@@ -40,7 +40,7 @@
 									}, this));
 									return false;
 								" 
-								href="{link controller='KasMailDeleteAction' mail_login=$mail['mail_login']}{/link}">
+								href="{link controller='KasMailDelete' mail_login=$mail['mail_login']}{/link}">
 									<span class="icon icon16 fa-times"></span>
 							</a>
 							{event name='rowButtons'}
