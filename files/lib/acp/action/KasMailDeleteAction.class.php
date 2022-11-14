@@ -6,6 +6,7 @@ use Laminas\Diactoros\Response\EmptyResponse;
 use Laminas\Diactoros\Response\RedirectResponse;
 use wcf\acp\page\KasMailPage;
 use wcf\action\AbstractAction;
+use wcf\system\cache\builder\KasMailCacheBuilder;
 use wcf\system\kas\KasApi;
 use wcf\system\request\LinkHandler;
 
