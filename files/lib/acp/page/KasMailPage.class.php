@@ -4,11 +4,15 @@ namespace wcf\acp\page;
 
 use wcf\page\AbstractPage;
 use wcf\system\cache\builder\KasMailCacheBuilder;
-use wcf\system\kas\KasApi;
 use wcf\system\WCF;
 
 class KasMailPage extends AbstractPage
 {
+    /**
+     * @inheritDoc
+     */
+    public $neededPermission = ['admin.kas.canManageMails'];
+
     protected $mails;
 
     /**

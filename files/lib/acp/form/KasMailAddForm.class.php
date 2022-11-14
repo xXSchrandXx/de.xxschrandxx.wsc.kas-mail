@@ -6,7 +6,7 @@ use wcf\form\AbstractFormBuilderForm;
 use wcf\system\cache\builder\KasMailCacheBuilder;
 use wcf\system\event\EventHandler;
 use wcf\system\form\builder\container\FormContainer;
-use wcf\system\form\builder\field\BooleanFormField;
+use wcf\system\form\builder\field\kas\DomainSingleSelectionFormField;
 use wcf\system\form\builder\field\MultilineTextFormField;
 use wcf\system\form\builder\field\PasswordFormField;
 use wcf\system\form\builder\field\SingleSelectionFormField;
@@ -17,6 +17,11 @@ use wcf\system\WCF;
 
 class KasMailAddForm extends AbstractFormBuilderForm
 {
+    /**
+     * @inheritDoc
+     */
+    public $neededPermission = ['admin.kas.canManageMails'];
+
     /**
      * @inheritDoc
      */
@@ -52,7 +57,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
                     TextFormField::create('local_part')
                         ->label('local_part')
                         ->required(),
-                        TextFormField::create('domain_part')
+                    DomainSingleSelectionFormField::create('domain_part')
                         ->label('domain_part')
                         ->required(),
                     // TODO Add start end time

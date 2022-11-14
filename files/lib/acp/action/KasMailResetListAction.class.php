@@ -14,6 +14,11 @@ final class KasMailResetListAction extends AbstractAction
     /**
      * @inheritDoc
      */
+    public $neededPermission = ['admin.kas.canManageMails'];
+
+    /**
+     * @inheritDoc
+     */
     public function execute()
     {
         parent::execute();
