@@ -9,6 +9,12 @@
     </div>
 </header>
 
+{if $faultCode|isset && $faultString|isset}
+	<p class="error">
+		{$faultCode}: {$faultString}
+	</p>
+{/if}
+
 {@$form->getHtml()}
 
 {include file='footer'}
