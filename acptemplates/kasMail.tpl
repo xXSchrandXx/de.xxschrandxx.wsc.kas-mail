@@ -38,7 +38,7 @@
 									}, this));
 									return false;
 								" 
-								href="{link controller='KasMailDeleteAction'}{/link}" class="button">
+								href="{link controller='KasMailDeleteAction' mail_login=$mail['mail_login']}{/link}" class="button">
 									<span class="icon icon16 fa-times"></span>
 									<span>{lang}wcf.acp.kasMail.button.delete{/lang}</span>
 							</a>
