@@ -56,4 +56,14 @@ final class KasMailDeleteAction extends AbstractAction
             );
         }
     }
+
+    /**
+     * @inheritDoc
+     */
+    protected function executed()
+    {
+        parent::executed();
+
+        KasMailCacheBuilder::getInstance()->reset();
+    }
 }
