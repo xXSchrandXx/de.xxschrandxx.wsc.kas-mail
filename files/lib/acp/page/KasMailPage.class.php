@@ -11,6 +11,11 @@ class KasMailPage extends AbstractPage
     /**
      * @inheritDoc
      */
+    public $activeMenuItem = 'wcf.acp.menu.link.configuration.kas.kasMailPage';
+
+    /**
+     * @inheritDoc
+     */
     public $neededPermission = ['admin.kas.canManageMails'];
 
     protected $mails;

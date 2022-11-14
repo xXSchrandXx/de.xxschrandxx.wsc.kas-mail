@@ -20,6 +20,11 @@ class KasMailAddForm extends AbstractFormBuilderForm
     /**
      * @inheritDoc
      */
+    public $activeMenuItem = 'wcf.acp.menu.link.configuration.kas.kasMailAddForm';
+
+    /**
+     * @inheritDoc
+     */
     public $neededPermission = ['admin.kas.canManageMails'];
 
     /**
