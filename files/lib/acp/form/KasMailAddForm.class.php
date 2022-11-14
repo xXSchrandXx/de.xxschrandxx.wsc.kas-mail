@@ -196,9 +196,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
 
         if ($this->formAction === 'edit') {
             $formData['data']['mail_login'] = $this->formObject['mail_login'];
-            if (empty($formData['data']['mail_password'])) {
-                $formData['data']['mail_new_password'] = $this->formObject['mail_password'];
-            } else {
+            if (!empty($formData['data']['mail_password'])) {
                 $formData['data']['mail_new_password'] = $formData['data']['mail_password'];
             }
             unset($formData['data']['mail_password']);
