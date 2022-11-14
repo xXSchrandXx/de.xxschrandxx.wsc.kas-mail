@@ -76,85 +76,88 @@ class KasMailAddForm extends AbstractFormBuilderForm
             $adresses = explode(',', $this->formObject['mail_adresses']);
             $adress = explode('@', $adresses[0]);
             $localPart = $adress[0];
-            $domainPart = $adress[1];
+            $nodes = [];
+        } else {
+            $nodes = [
+                DomainSingleSelectionFormField::create('domain_part')
+                    ->label('domain_part')
+                    ->required()
+                ];
         }
 
-        $this->form->appendChild(
+        \array_push($nodes,
+            PasswordFormField::create('mail_password')
+                ->placeholder(($this->formAction === 'edit') ? 'wcf.acp.updateServer.loginPassword.noChange' : '')
+                ->required(($this->formAction === 'edit') ? 0 : 1),
+            SingleSelectionFormField::create('show_password')
+                ->label('show_password')
+                ->options([
+                    0 => [
+                        'label' => 'wcf.global.form.boolean.yes',
+                        'value' => 'Y',
+                        'depth' => 0
+                    ],
+                    1 => [
+                        'label' => 'wcf.global.form.boolean.no',
+                        'value' => 'N',
+                        'depth' => 0
+                    ]
+                ], true)
+                ->value(($this->formAction == 'edit' && isset($this->formObject['show_password'])) ? $this->formObject['show_password'] : 'N')
+                ->required(),
+            TextFormField::create('local_part')
+                ->label('local_part')
+                ->value(($this->formAction == 'edit' && isset($localPart)) ? $localPart : '')
+                ->required(),
+            // TODO Add start end time
+            SingleSelectionFormField::create('responder')
+                ->label('responder')
+                ->options([
+                    0 => [
+                        'label' => 'wcf.global.form.boolean.no',
+                        'value' => 'N',
+                        'depth' => 0
+                    ],
+                    1 => [
+                        'label' => 'wcf.global.form.boolean.yes',
+                        'value' => 'Y',
+                        'depth' => 0
+                    ]
+                ], true)
+                ->value(($this->formAction == 'edit' && isset($this->formObject['responder'])) ? $this->formObject['responder'] : 'N'),
+            SingleSelectionFormField::create('mail_responder_content_type')
+                ->label('mail_responder_content_type')
+                ->options([
+                    0 => [
+                        'label' => 'text',
+                        'value' => 'text',
+                        'depth' => 0
+                    ],
+                    1 => [
+                        'label' => 'html',
+                        'value' => 'html',
+                        'depth' => 0
+                    ]
+                ], true)
+                ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_content_type'])) ? $this->formObject['mail_responder_content_type'] : 'text'),
+            TextFormField::create('mail_responder_displayname')
+                ->label('mail_responder_displayname')
+                ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_displayname'])) ? $this->formObject['mail_responder_displayname'] : ''),
+            MultilineTextFormField::create('responder_text')
+                ->label('responder_text')
+                ->value(($this->formAction == 'edit' && isset($this->formObject['responder_text'])) ? $this->formObject['responder_text'] : ''),
+            TextFormField::create('copy_adress')
+                ->label('copy_adress')
+                ->value(($this->formAction == 'edit' && isset($this->formObject['copy_adress'])) ? $this->formObject['copy_adress'] : '')
+                ->description('copy_adress.description(comma seperated list)'),
+            TextFormField::create('mail_sender_alias')
+                ->label('mail_sender_alias')
+                ->value(($this->formAction == 'edit' && isset($this->formObject['mail_sender_alias'])) ? $this->formObject['mail_sender_alias'] : '')
+        );
+
+        $container = $this->form->appendChild(
             FormContainer::create('data')
-                ->appendChildren([
-                    PasswordFormField::create('mail_password')
-                        ->placeholder(($this->formAction === 'edit') ? 'wcf.acp.updateServer.loginPassword.noChange' : '')
-                        ->required(($this->formAction === 'edit') ? 0 : 1),
-                    SingleSelectionFormField::create('show_password')
-                        ->label('show_password')
-                        ->options([
-                            0 => [
-                                'label' => 'wcf.global.form.boolean.yes',
-                                'value' => 'Y',
-                                'depth' => 0
-                            ],
-                            1 => [
-                                'label' => 'wcf.global.form.boolean.no',
-                                'value' => 'N',
-                                'depth' => 0
-                            ]
-                        ], true)
-                        ->value(($this->formAction == 'edit') ? $this->formObject['show_password'] : 'N')
-                        ->required(),
-                    TextFormField::create('local_part')
-                        ->label('local_part')
-                        ->value(($this->formAction == 'edit' && isset($localPart)) ? $localPart : '')
-                        ->required(),
-                    // TODO Add saved value
-                    DomainSingleSelectionFormField::create('domain_part')
-                        ->label('domain_part')
-                        ->value(($this->formAction == 'edit' && isset($domainPart)) ? $domainPart : 'none')
-                        ->required(),
-                    // TODO Add start end time
-                    SingleSelectionFormField::create('responder')
-                        ->label('responder')
-                        ->options([
-                            0 => [
-                                'label' => 'wcf.global.form.boolean.no',
-                                'value' => 'N',
-                                'depth' => 0
-                            ],
-                            1 => [
-                                'label' => 'wcf.global.form.boolean.yes',
-                                'value' => 'Y',
-                                'depth' => 0
-                            ]
-                        ], true)
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['responder'])) ? $this->formObject['responder'] : 'N'),
-                    SingleSelectionFormField::create('mail_responder_content_type')
-                        ->label('mail_responder_content_type')
-                        ->options([
-                            0 => [
-                                'label' => 'text',
-                                'value' => 'text',
-                                'depth' => 0
-                            ],
-                            1 => [
-                                'label' => 'html',
-                                'value' => 'html',
-                                'depth' => 0
-                            ]
-                        ], true)
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_content_type'])) ? $this->formObject['mail_responder_content_type'] : 'text'),
-                    TextFormField::create('mail_responder_displayname')
-                        ->label('mail_responder_displayname')
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_displayname'])) ? $this->formObject['mail_responder_displayname'] : ''),
-                    MultilineTextFormField::create('responder_text')
-                        ->label('responder_text')
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['responder_text'])) ? $this->formObject['responder_text'] : ''),
-                    TextFormField::create('copy_adress')
-                        ->label('copy_adress')
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['copy_adress'])) ? $this->formObject['copy_adress'] : '')
-                        ->description('copy_adress.description(comma seperated list)'),
-                    TextFormField::create('mail_sender_alias')
-                        ->label('mail_sender_alias')
-                        ->value(($this->formAction == 'edit' && isset($this->formObject['mail_sender_alias'])) ? $this->formObject['mail_sender_alias'] : '')
-                ])
+                ->appendChildren($nodes)
         );
     }
 
