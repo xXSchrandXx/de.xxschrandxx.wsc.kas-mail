@@ -1,10 +1,13 @@
 <?php
+
 namespace wcf\system\cache\builder;
 
 use wcf\system\kas\KasApi;
 
-class KasMailCacheBuilder extends AbstractCacheBuilder {
-    public function rebuild(array $parameters) {
+class KasMailCacheBuilder extends AbstractCacheBuilder
+{
+    public function rebuild(array $parameters)
+    {
         $data = [];
         try {
             $api = new KasApi();

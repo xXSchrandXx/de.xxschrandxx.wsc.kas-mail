@@ -109,7 +109,8 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ];
         }
 
-        \array_push($nodes,
+        \array_push(
+            $nodes,
             PasswordFormField::create('mail_password')
                 ->placeholder(($this->formAction === 'edit') ? 'wcf.acp.updateServer.loginPassword.noChange' : '')
                 ->required(($this->formAction === 'edit') ? 0 : 1),
@@ -175,7 +176,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ->value(($this->formAction == 'edit' && isset($this->formObject['mail_sender_alias'])) ? $this->formObject['mail_sender_alias'] : '')
         );
 
-        $container = $this->form->appendChild(
+        $this->form->appendChild(
             FormContainer::create('data')
                 ->appendChildren($nodes)
         );
