@@ -28,6 +28,8 @@
 		<instruction type="acpTemplate"/>
 		<instruction type="file"/>
 		<instruction type="language"/>
+		<instruction type="page"/>
+		<instruction type="template"/>
 		<instruction type="userGroupOption"/>
 	</instructions>
 </package>
