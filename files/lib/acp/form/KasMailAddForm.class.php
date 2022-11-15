@@ -7,7 +7,6 @@ use wcf\system\cache\builder\KasMailCacheBuilder;
 use wcf\system\event\EventHandler;
 use wcf\system\exception\IllegalLinkException;
 use wcf\system\form\builder\container\FormContainer;
-use wcf\system\form\builder\field\IFormField;
 use wcf\system\form\builder\field\kas\DomainSingleSelectionFormField;
 use wcf\system\form\builder\field\MultilineTextFormField;
 use wcf\system\form\builder\field\PasswordFormField;
@@ -80,7 +79,6 @@ class KasMailAddForm extends AbstractFormBuilderForm
         } else {
             $nodes = [
                 DomainSingleSelectionFormField::create('domain_part')
-                    ->label('domain_part')
                     ->required()
                 ];
         }
@@ -90,7 +88,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ->placeholder(($this->formAction === 'edit') ? 'wcf.acp.updateServer.loginPassword.noChange' : '')
                 ->required(($this->formAction === 'edit') ? 0 : 1),
             SingleSelectionFormField::create('show_password')
-                ->label('show_password')
+                ->label('wcf.acp.form.kasMail.show_password')
                 ->options([
                     0 => [
                         'label' => 'wcf.global.form.boolean.yes',
@@ -106,12 +104,12 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ->value(($this->formAction == 'edit' && isset($this->formObject['show_password'])) ? $this->formObject['show_password'] : 'N')
                 ->required(),
             TextFormField::create('local_part')
-                ->label('local_part')
+                ->label('wcf.acp.form.kasMail.local_part')
                 ->value(($this->formAction == 'edit' && isset($localPart)) ? $localPart : '')
                 ->required(),
             // TODO Add start end time
             SingleSelectionFormField::create('responder')
-                ->label('responder')
+                ->label('wcf.acp.form.kasMail.responder')
                 ->options([
                     0 => [
                         'label' => 'wcf.global.form.boolean.no',
@@ -126,7 +124,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ], true)
                 ->value(($this->formAction == 'edit' && isset($this->formObject['responder'])) ? $this->formObject['responder'] : 'N'),
             SingleSelectionFormField::create('mail_responder_content_type')
-                ->label('mail_responder_content_type')
+                ->label('wcf.acp.form.kasMail.mail_responder_content_type')
                 ->options([
                     0 => [
                         'label' => 'text',
@@ -141,17 +139,17 @@ class KasMailAddForm extends AbstractFormBuilderForm
                 ], true)
                 ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_content_type'])) ? $this->formObject['mail_responder_content_type'] : 'text'),
             TextFormField::create('mail_responder_displayname')
-                ->label('mail_responder_displayname')
+                ->label('wcf.acp.form.kasMail.mail_responder_displayname')
                 ->value(($this->formAction == 'edit' && isset($this->formObject['mail_responder_displayname'])) ? $this->formObject['mail_responder_displayname'] : ''),
             MultilineTextFormField::create('responder_text')
-                ->label('responder_text')
+                ->label('wcf.acp.form.kasMail.responder_text')
                 ->value(($this->formAction == 'edit' && isset($this->formObject['responder_text'])) ? $this->formObject['responder_text'] : ''),
             TextFormField::create('copy_adress')
-                ->label('copy_adress')
+                ->label('wcf.acp.form.kasMail.copy_adress')
                 ->value(($this->formAction == 'edit' && isset($this->formObject['copy_adress'])) ? $this->formObject['copy_adress'] : '')
-                ->description('copy_adress.description(comma seperated list)'),
+                ->description('wcf.acp.form.kasMail.copy_adress.description'),
             TextFormField::create('mail_sender_alias')
-                ->label('mail_sender_alias')
+                ->label('wcf.acp.form.kasMail.mail_sender_alias')
                 ->value(($this->formAction == 'edit' && isset($this->formObject['mail_sender_alias'])) ? $this->formObject['mail_sender_alias'] : '')
         );
 
