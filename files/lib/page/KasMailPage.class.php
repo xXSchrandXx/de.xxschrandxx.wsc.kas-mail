@@ -24,6 +24,8 @@ class KasMailPage extends AbstractPage
      */
     public function readParameters()
     {
+        parent::readParameters();
+
         $allowed = ArrayUtil::trim(\explode(
             "\n",
             WCF::getSession()->getPermission('mod.kas.mailList')
