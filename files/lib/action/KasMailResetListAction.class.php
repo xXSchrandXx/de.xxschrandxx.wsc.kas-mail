@@ -14,6 +14,11 @@ final class KasMailResetListAction extends AbstractAction
     /**
      * @inheritDoc
      */
+    public $loginRequired = true;
+
+    /**
+     * @inheritDoc
+     */
     public $neededPermission = ['mod.kas.canClearMails'];
 
     /**
