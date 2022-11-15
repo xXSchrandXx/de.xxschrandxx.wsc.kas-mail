@@ -25,6 +25,7 @@
 	<category name="wcf.acp.form">
 		<item name="wcf.acp.form.kasMailadd.title"><![CDATA[Add email]]></item>
 		<item name="wcf.acp.form.kasMailedit.title"><![CDATA[Edit email]]></item>
+		<item name="wcf.acp.form.kasMail.is_active"><![CDATA[Active]]></item>
 		<item name="wcf.acp.form.kasMail.show_password"><![CDATA[Password in clear text]]></item>
 		<item name="wcf.acp.form.kasMail.local_part"><![CDATA[local part]]></item>
 		<item name="wcf.acp.form.kasMail.responder"><![CDATA[Autoresponder]]></item>
@@ -34,6 +35,9 @@
 		<item name="wcf.acp.form.kasMail.copy_adress"><![CDATA[Copy recipient]]></item>
 		<item name="wcf.acp.form.kasMail.copy_adress.description"><![CDATA[Multiple emails must be separated by a comma.]]></item>
 		<item name="wcf.acp.form.kasMail.mail_sender_alias"><![CDATA[Additional sender addresses]]></item>
+	</category>
+	<category name="wcf.global.form">
+		<item name="wcf.global.form.forbidden"><![CDATA[Disabled]]></item>
 	</category>
 	<category name="wcf.page">
 		<item name="wcf.page.kasMail.title"><![CDATA[Emails]]></item>
