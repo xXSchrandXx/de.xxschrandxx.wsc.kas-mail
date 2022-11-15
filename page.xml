@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="https://www.woltlab.com"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/5.4/page.xsd">
+	<import>
+		<page identifier="de.xxschrandxx.wsc.kas-mail.kasMailPage">
+			<pageType>system</pageType>
+			<controller>wcf\page\KasMailPage</controller>
+			<name language="de">E-Mails</name>
+			<name language="en">E-Mails</name>
+			<permissions>mod.kas.canSeeMails</permissions>
+		</page>
+	</import>
+</data>
