@@ -75,9 +75,35 @@ class KasMailAddForm extends AbstractFormBuilderForm
             $adresses = explode(',', $this->formObject['mail_adresses']);
             $adress = explode('@', $adresses[0]);
             $localPart = $adress[0];
-            $nodes = [];
+            $nodes = [
+                SingleSelectionFormField::create('is_active')
+                ->label('wcf.acp.form.kasMail.is_active')
+                ->options([
+                    0 => [
+                        'label' => 'wcf.global.form.boolean.yes',
+                        'value' => 'Y',
+                        'depth' => 0
+                    ],
+                    1 => [
+                        'label' => 'wcf.global.form.boolean.no',
+                        'value' => 'N',
+                        'depth' => 0
+                    ],
+                    3 => [
+                        'lavel' => 'wcf.global.form.forbidden',
+                        'value' => 'forbidden',
+                        'depth' => 0
+                    ]
+                ], true)
+                ->value(($this->formAction == 'edit' && isset($this->formObject['is_active'])) ? $this->formObject['is_active'] : 'Y'),
+
+            ];
         } else {
             $nodes = [
+                TextFormField::create('local_part')
+                    ->label('wcf.acp.form.kasMail.local_part')
+                    ->value(($this->formAction == 'edit' && isset($localPart)) ? $localPart : '')
+                    ->required(),
                 DomainSingleSelectionFormField::create('domain_part')
                     ->required()
                 ];
@@ -102,10 +128,6 @@ class KasMailAddForm extends AbstractFormBuilderForm
                     ]
                 ], true)
                 ->value(($this->formAction == 'edit' && isset($this->formObject['show_password'])) ? $this->formObject['show_password'] : 'N')
-                ->required(),
-            TextFormField::create('local_part')
-                ->label('wcf.acp.form.kasMail.local_part')
-                ->value(($this->formAction == 'edit' && isset($localPart)) ? $localPart : '')
                 ->required(),
             // TODO Add start end time
             SingleSelectionFormField::create('responder')
