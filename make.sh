@@ -1,6 +1,6 @@
 #/bin/bash
 PACKAGE_NAME=de.xxschrandxx.wsc.kas-mail
-PACKAGE_TYPES=(files)
+PACKAGE_TYPES=(files acptemplates templates)
 
 for i in "${PACKAGE_TYPES[@]}"
 do
