@@ -11,6 +11,11 @@ class KasMailPage extends AbstractPage
     /**
      * @inheritDoc
      */
+    public $loginRequired = true;
+
+    /**
+     * @inheritDoc
+     */
     public $neededPermission = ['mod.kas.canSeeMails'];
 
     /**
