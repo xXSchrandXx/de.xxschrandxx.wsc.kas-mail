@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="de"
+	xmlns="https://www.woltlab.com"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/5.5/language.xsd">
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.option.admin.kas.canManageMails"><![CDATA[Kann E-Mails verwalten]]></item>
+		<item name="wcf.acp.group.option.mod.kas.canClearMails"><![CDATA[Kann E-Mails neu laden]]></item>
+		<item name="wcf.acp.group.option.mod.kas.canSeeMails"><![CDATA[Kann E-Mail Seite sehen]]></item>
+		<item name="wcf.acp.group.option.mod.kas.mailList"><![CDATA[E-Mails]]></item>
+		<item name="wcf.acp.group.option.mod.kas.mailList.description"><![CDATA[Liste von E-Mails oder Benutzern, die gesehen werden können.]]></item>
+	</category>
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.configuration.kas.kasMailPage"><![CDATA[E-Mails]]></item>
+		<item name="wcf.acp.menu.link.configuration.kas.kasMailAddForm"><![CDATA[E-Mail hinzufügen]]></item>
+	</category>
+	<category name="wcf.acp.page">
+		<item name="wcf.acp.page.kasMail.title"><![CDATA[E-Mails]]></item>
+		<item name="wcf.acp.page.kasMail.button.clear"><![CDATA[E-Mails neu abrufen]]></item>
+		<item name="wcf.acp.page.kasMail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
+		<item name="wcf.acp.page.kasMail.button.add"><![CDATA[E-Mail hinzufügen]]></item>
+		<item name="wcf.acp.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
+		<item name="wcf.acp.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
+		<item name="wcf.acp.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>
+	</category>
+	<category name="wcf.acp.form">
+		<item name="wcf.acp.form.kasMailadd.title"><![CDATA[E-Mail hinzufügen]]></item>
+		<item name="wcf.acp.form.kasMailedit.title"><![CDATA[E-Mail bearbeiten]]></item>
+		<item name="wcf.acp.form.kasMail.show_password"><![CDATA[Kennwort im Klartext]]></item>
+		<item name="wcf.acp.form.kasMail.local_part"><![CDATA[Lokalteil]]></item>
+		<item name="wcf.acp.form.kasMail.responder"><![CDATA[Autoresponder]]></item>
+		<item name="wcf.acp.form.kasMail.mail_responder_content_type"><![CDATA[Autoresponder Typ]]></item>
+		<item name="wcf.acp.form.kasMail.mail_responder_displayname"><![CDATA[Autoresponder Anzeigename]]></item>
+		<item name="wcf.acp.form.kasMail.responder_text"><![CDATA[Autoresponder Text]]></item>
+		<item name="wcf.acp.form.kasMail.copy_adress"><![CDATA[Kopieempfänger]]></item>
+		<item name="wcf.acp.form.kasMail.copy_adress.description"><![CDATA[Mehrere E-Mails müssen durch ein Komma getrennt werden.]]></item>
+		<item name="wcf.acp.form.kasMail.mail_sender_alias"><![CDATA[Zusätzliche Absenderadressen]]></item>
+	</category>
+	<category name="wcf.page">
+		<item name="wcf.page.kasMail.title"><![CDATA[E-Mails]]></item>
+		<item name="wcf.page.kasMail.kasLink"><![CDATA[Einloggen {if LANGUAGE_USE_INFORMAL_VARIANT}kannst du dich{else}können Sie sich{/if} <a href="https://webmail.all-inkl.com/" class="externalURL">hier</a>.]]></item>
+		<item name="wcf.page.kasMail.button.clear"><![CDATA[E-Mails neu abrufen]]></item>
+		<item name="wcf.page.kasMail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
+		<item name="wcf.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
+		<item name="wcf.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
+		<item name="wcf.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>
+	</category>
+</language>
