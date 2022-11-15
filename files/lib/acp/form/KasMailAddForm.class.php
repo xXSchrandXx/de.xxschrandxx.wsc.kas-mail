@@ -90,7 +90,7 @@ class KasMailAddForm extends AbstractFormBuilderForm
                         'depth' => 0
                     ],
                     3 => [
-                        'lavel' => 'wcf.global.form.forbidden',
+                        'label' => 'wcf.global.form.forbidden',
                         'value' => 'forbidden',
                         'depth' => 0
                     ]
