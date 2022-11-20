@@ -89,8 +89,8 @@
 					<tbody>
 						{foreach from=$maillists item=maillist}
 							<tr>
-								<td class="columnTitle">{$mail['mailinglist_name']}</td>
-								<td class="columnText">{$mail['mailinglist_is_active']}</td>
+								<td class="columnTitle">{$maillist['mailinglist_name']}</td>
+								<td class="columnText">{$maillist['mailinglist_is_active']}</td>
 							</tr>
 						{/foreach}
 					</tbody>
