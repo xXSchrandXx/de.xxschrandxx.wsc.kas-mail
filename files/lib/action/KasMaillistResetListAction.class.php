@@ -9,7 +9,7 @@ use wcf\action\AbstractAction;
 use wcf\system\cache\builder\KasMaillistCacheBuilder;
 use wcf\system\request\LinkHandler;
 
-final class KasMailResetListAction extends AbstractAction
+final class KasMaillistResetListAction extends AbstractAction
 {
     /**
      * @inheritDoc
