@@ -15,9 +15,13 @@
 	</category>
 	<category name="wcf.acp.page">
 		<item name="wcf.acp.page.kasMail.title"><![CDATA[Emails]]></item>
-		<item name="wcf.acp.page.kasMail.button.clear"><![CDATA[Retrieve emails]]></item>
-		<item name="wcf.acp.page.kasMail.clear.sure"><![CDATA[Should all cached emails be deleted and checked again?]]></item>
-		<item name="wcf.acp.page.kasMail.button.add"><![CDATA[Add email]]></item>
+		<item name="wcf.acp.page.kasMail.mail"><![CDATA[Emails]]></item>
+		<item name="wcf.acp.page.kasMail.list"><![CDATA[Lists]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.clear"><![CDATA[Retrieve emails]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.clear.sure"><![CDATA[Should all cached emails be deleted and checked again?]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.add"><![CDATA[Add email]]></item>
+		<item name="wcf.acp.page.kasMail.button.list.clear"><![CDATA[Retrieve email lists]]></item>
+		<item name="wcf.acp.page.kasMail.button.list.clear.sure"><![CDATA[Should all cached email lists be deleted and checked again?]]></item>
 		<item name="wcf.acp.page.kasMail.mail_adresses"><![CDATA[Email]]></item>
 		<item name="wcf.acp.page.kasMail.mail_login"><![CDATA[User]]></item>
 		<item name="wcf.acp.page.kasMail.mail_password"><![CDATA[Password]]></item>
@@ -41,9 +45,13 @@
 	</category>
 	<category name="wcf.page">
 		<item name="wcf.page.kasMail.title"><![CDATA[Emails]]></item>
+		<item name="wcf.page.kasMail.mail"><![CDATA[Emails]]></item>
+		<item name="wcf.page.kasMail.list"><![CDATA[Lists]]></item>
 		<item name="wcf.page.kasMail.kasLink"><![CDATA[You can log in <a href="https://webmail.all-inkl.com/" class="externalURL">here</a>.]]></item>
-		<item name="wcf.page.kasMail.button.clear"><![CDATA[Retrieve emails]]></item>
-		<item name="wcf.page.kasMail.clear.sure"><![CDATA[Should all cached emails be deleted and checked again?]]></item>
+		<item name="wcf.page.kasMail.button.mail.clear"><![CDATA[Retrieve emails]]></item>
+		<item name="wcf.page.kasMail.button.mail.clear.sure"><![CDATA[Should all cached emails be deleted and checked again?]]></item>
+		<item name="wcf.page.kasMail.button.list.clear"><![CDATA[Retrieve email lists]]></item>
+		<item name="wcf.page.kasMail.button.list.clear.sure"><![CDATA[Should all cached email lists be deleted and checked again?]]></item>
 		<item name="wcf.page.kasMail.mail_adresses"><![CDATA[Email]]></item>
 		<item name="wcf.page.kasMail.mail_login"><![CDATA[User]]></item>
 		<item name="wcf.page.kasMail.mail_password"><![CDATA[Password]]></item>

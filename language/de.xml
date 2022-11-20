@@ -15,9 +15,13 @@
 	</category>
 	<category name="wcf.acp.page">
 		<item name="wcf.acp.page.kasMail.title"><![CDATA[E-Mails]]></item>
-		<item name="wcf.acp.page.kasMail.button.clear"><![CDATA[E-Mails neu abrufen]]></item>
-		<item name="wcf.acp.page.kasMail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
-		<item name="wcf.acp.page.kasMail.button.add"><![CDATA[E-Mail hinzufügen]]></item>
+		<item name="wcf.acp.page.kasMail.mail"><![CDATA[E-Mails]]></item>
+		<item name="wcf.acp.page.kasMail.list"><![CDATA[E-Mail Listen]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.clear"><![CDATA[E-Mails neu abrufen]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
+		<item name="wcf.acp.page.kasMail.button.mail.add"><![CDATA[E-Mail hinzufügen]]></item>
+		<item name="wcf.acp.page.kasMail.button.list.clear"><![CDATA[E-Mail Listen neu abrufen]]></item>
+		<item name="wcf.acp.page.kasMail.button.list.clear.sure"><![CDATA[Sollen alle gecachten E-Mail Listen gelöscht und erneut abgefragt werden?]]></item>
 		<item name="wcf.acp.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
 		<item name="wcf.acp.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
 		<item name="wcf.acp.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>
@@ -41,9 +45,13 @@
 	</category>
 	<category name="wcf.page">
 		<item name="wcf.page.kasMail.title"><![CDATA[E-Mails]]></item>
+		<item name="wcf.page.kasMail.mail"><![CDATA[E-Mails]]></item>
+		<item name="wcf.page.kasMail.list"><![CDATA[E-Mail Listen]]></item>
 		<item name="wcf.page.kasMail.kasLink"><![CDATA[Einloggen {if LANGUAGE_USE_INFORMAL_VARIANT}kannst du dich{else}können Sie sich{/if} <a href="https://webmail.all-inkl.com/" class="externalURL">hier</a>.]]></item>
-		<item name="wcf.page.kasMail.button.clear"><![CDATA[E-Mails neu abrufen]]></item>
-		<item name="wcf.page.kasMail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
+		<item name="wcf.page.kasMail.button.mail.clear"><![CDATA[E-Mails neu abrufen]]></item>
+		<item name="wcf.page.kasMail.button.mail.clear.sure"><![CDATA[Sollen alle gecachten E-Mails gelöscht und erneut abgefragt werden?]]></item>
+		<item name="wcf.page.kasMail.button.list.clear"><![CDATA[E-Mail Listen neu abrufen]]></item>
+		<item name="wcf.page.kasMail.button.list.clear.sure"><![CDATA[Sollen alle gecachten E-Mail Listen gelöscht und erneut abgefragt werden?]]></item>
 		<item name="wcf.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
 		<item name="wcf.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
 		<item name="wcf.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>

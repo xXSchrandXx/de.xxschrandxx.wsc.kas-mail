@@ -31,7 +31,7 @@ final class KasMailResetListAction extends AbstractAction
             return new EmptyResponse();
         } else {
             return new RedirectResponse(
-                LinkHandler::getInstance()->getControllerLink(KasMailPage::class)
+                LinkHandler::getInstance()->getControllerLink(KasMailPage::class, ['section' => 'mail'])
             );
         }
     }

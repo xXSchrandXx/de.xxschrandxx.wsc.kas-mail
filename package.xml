@@ -6,7 +6,7 @@
 		<packagename><![CDATA[All-Inkl E-Mail Administration]]></packagename>
 		<packagedescription><![CDATA[Adds a page for listing and modifying all-inclusive emails.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Fügt eine Seite zum auflisten und modifizieren von All-Inkl E-Mails.]]></packagedescription>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<date>2022-11-07</date>
 	</packageinformation>
 
@@ -16,12 +16,19 @@
 
 	<requiredpackages>
 		<requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
-		<requiredpackage minversion="1.0.0">de.xxschrandxx.wcs.kas-domain</requiredpackage>
+		<requiredpackage minversion="1.0.1">de.xxschrandxx.wcs.kas-domain</requiredpackage>
 	</requiredpackages>
 
 	<excludedpackages>
 		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
 	</excludedpackages>
+
+	<instructions type="update" fromversion="1.0.0">
+		<instruction type="acpTemplate"/>
+		<instruction type="file"/>
+		<instruction type="language"/>
+		<instruction type="template"/>
+	</instructions>
 
 	<instructions type="install">
 		<instruction type="acpMenu"/>

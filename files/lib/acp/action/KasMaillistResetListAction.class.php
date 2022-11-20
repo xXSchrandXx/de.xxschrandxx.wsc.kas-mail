@@ -1,25 +1,20 @@
 <?php
 
-namespace wcf\action;
+namespace wcf\acp\action;
 
 use Laminas\Diactoros\Response\EmptyResponse;
 use Laminas\Diactoros\Response\RedirectResponse;
-use wcf\page\KasMailPage;
+use wcf\acp\page\KasMailPage;
 use wcf\action\AbstractAction;
-use wcf\system\cache\builder\KasMailCacheBuilder;
+use wcf\system\cache\builder\KasMaillistCacheBuilder;
 use wcf\system\request\LinkHandler;
 
-final class KasMailResetListAction extends AbstractAction
+final class KasMaillistResetListAction extends AbstractAction
 {
     /**
      * @inheritDoc
      */
-    public $loginRequired = true;
-
-    /**
-     * @inheritDoc
-     */
-    public $neededPermission = ['mod.kas.canClearMails'];
+    public $neededPermission = ['admin.kas.canManageMails'];
 
     /**
      * @inheritDoc
@@ -28,7 +23,7 @@ final class KasMailResetListAction extends AbstractAction
     {
         parent::execute();
 
-        KasMailCacheBuilder::getInstance()->reset();
+        KasMaillistCacheBuilder::getInstance()->reset();
 
         $this->executed();
 
@@ -36,7 +31,7 @@ final class KasMailResetListAction extends AbstractAction
             return new EmptyResponse();
         } else {
             return new RedirectResponse(
-                LinkHandler::getInstance()->getControllerLink(KasMailPage::class, ['section' => 'mail'])
+                LinkHandler::getInstance()->getControllerLink(KasMailPage::class, ['section' => 'list'])
             );
         }
     }
