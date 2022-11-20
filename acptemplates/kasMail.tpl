@@ -81,7 +81,6 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th></th>
 							<th>{lang}wcf.acp.page.kasMail.mailinglist_name{/lang}</th>
 							<th>{lang}wcf.acp.page.kasMail.mailinglist_is_active{/lang}</th>
 						</tr>
