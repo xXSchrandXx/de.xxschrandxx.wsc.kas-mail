@@ -60,15 +60,15 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th>{lang}wcf.page.kasMail.mailinglist_name{/lang}</th>
-							<th>{lang}wcf.page.kasMail.mailinglist_is_active{/lang}</th>
+							<th>{lang}wcf.page.kasMail.mail_forward_adress{/lang}</th>
+							<th>{lang}wcf.page.kasMail.mail_forward_comment{/lang}</th>
 						</tr>
 					</thead>
 					<tbody>
 						{foreach from=$maillists item=maillist}
 							<tr>
-								<td class="columnTitle">{$maillist['mailinglist_name']}</td>
-								<td class="columnText">{$maillist['mailinglist_is_active']}</td>
+								<td class="columnTitle">{$maillist['mail_forward_adress']}</td>
+								<td class="columnText">{$maillist['mail_forward_comment']}</td>
 							</tr>
 						{/foreach}
 					</tbody>

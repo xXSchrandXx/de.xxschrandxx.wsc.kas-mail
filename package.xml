@@ -6,7 +6,7 @@
 		<packagename><![CDATA[All-Inkl E-Mail Administration]]></packagename>
 		<packagedescription><![CDATA[Adds a page for listing and modifying all-inclusive emails.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Fügt eine Seite zum auflisten und modifizieren von All-Inkl E-Mails.]]></packagedescription>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<date>2022-11-07</date>
 	</packageinformation>
 
@@ -24,7 +24,7 @@
 		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
 	</excludedpackages>
 
-	<instructions type="update" fromversion="1.0.0">
+	<instructions type="update" fromversion="1.0.1">
 		<instruction type="acpTemplate"/>
 		<instruction type="file"/>
 		<instruction type="language"/>

@@ -25,8 +25,8 @@
 		<item name="wcf.acp.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
 		<item name="wcf.acp.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
 		<item name="wcf.acp.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>
-		<item name="wcf.acp.page.kasMail.mailinglist_name"><![CDATA[Name]]></item>
-		<item name="wcf.acp.page.kasMail.mailinglist_is_active"><![CDATA[Aktiv]]></item>
+		<item name="wcf.acp.page.kasMail.mail_forward_adress"><![CDATA[Adresse]]></item>
+		<item name="wcf.acp.page.kasMail.mail_forward_comment"><![CDATA[Kommentar]]></item>
 	</category>
 	<category name="wcf.acp.form">
 		<item name="wcf.acp.form.kasMailadd.title"><![CDATA[E-Mail hinzufügen]]></item>
@@ -57,7 +57,7 @@
 		<item name="wcf.page.kasMail.mail_adresses"><![CDATA[E-Mail]]></item>
 		<item name="wcf.page.kasMail.mail_login"><![CDATA[Benutzer]]></item>
 		<item name="wcf.page.kasMail.mail_password"><![CDATA[Kennwort]]></item>
-		<item name="wcf.page.kasMail.mailinglist_name"><![CDATA[Name]]></item>
-		<item name="wcf.page.kasMail.mailinglist_is_active"><![CDATA[Aktiv]]></item>
+		<item name="wcf.page.kasMail.mail_forward_adress"><![CDATA[Adresse]]></item>
+		<item name="wcf.page.kasMail.mail_forward_comment"><![CDATA[Kommentar]]></item>
 	</category>
 </language>
