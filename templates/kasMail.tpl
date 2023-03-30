@@ -1,4 +1,4 @@
-{include file='header' pageTitle='wcf.page.kasMail.title'}
+{include file='header'}
 
 <header class="contentHeader">
 	<div class="contentHeaderTitle">

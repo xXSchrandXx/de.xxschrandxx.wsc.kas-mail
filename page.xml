@@ -8,6 +8,12 @@
 			<name language="de">E-Mails</name>
 			<name language="en">E-Mails</name>
 			<permissions>mod.kas.canSeeMails</permissions>
+			<content language="en">
+				<title>E-Mails</title>
+			</content>
+			<content language="de">
+				<title>E-Mails</title>
+			</content>
 		</page>
 	</import>
 </data>
