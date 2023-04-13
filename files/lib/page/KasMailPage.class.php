@@ -53,7 +53,8 @@ class KasMailPage extends AbstractPage
             ));
             foreach (KasMailCacheBuilder::getInstance()->getData() as $mail) {
                 if (!(in_array($mail['mail_login'], $allowed) || in_array($mail['mail_adresses'], $allowed))) {
-                    continue;
+                    $mail['mail_login'] = '';
+                    $mail['mail_password'] = '';
                 }
                 \array_push($this->mails, $mail);
             }
