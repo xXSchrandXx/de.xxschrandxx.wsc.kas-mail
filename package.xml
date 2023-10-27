@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/package.xsd" name="de.xxschrandxx.wsc.kas-mail">
 	<packageinformation>
-		<packagename><![CDATA[All-Inkl E-Mail Administration]]></packagename>
-		<packagedescription><![CDATA[Adds a page for listing and modifying all-inclusive emails.]]></packagedescription>
-		<packagedescription language="de"><![CDATA[Fügt eine Seite zum auflisten und modifizieren von All-Inkl E-Mails.]]></packagedescription>
-		<version>1.0.2</version>
+		<!-- de.xxschrandxx.wcs.kas-mail -->
+		<packagename>All-Inkl E-Mail Administration</packagename>
+		<packagedescription>Adds a page for listing and modifying all-inclusive emails.</packagedescription>
+		<packagedescription language="de">Fügt eine Seite zum auflisten und modifizieren von All-Inkl E-Mails.</packagedescription>
+		<version>1.0.3</version>
 		<date>2022-11-07</date>
 	</packageinformation>
-
 	<authorinformation>
-		<author><![CDATA[xXSchrandXx]]></author>
+		<author>xXSchrandXx</author>
 	</authorinformation>
-
 	<requiredpackages>
-		<requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
-		<requiredpackage minversion="1.0.1">de.xxschrandxx.wcs.kas-api</requiredpackage>
-		<requiredpackage minversion="1.0.0">de.xxschrandxx.wcs.kas-domain</requiredpackage>
+		<requiredpackage minversion="6.0.0 Beta 1">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="1.0.2">de.xxschrandxx.wsc.kas-api</requiredpackage>
+		<requiredpackage minversion="1.0.1">de.xxschrandxx.wsc.kas-domain</requiredpackage>
 	</requiredpackages>
-
 	<excludedpackages>
-		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+		<excludedpackage version="7.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
 	</excludedpackages>
-
-	<instructions type="update" fromversion="1.0.1">
-		<instruction type="acpTemplate"/>
-		<instruction type="file"/>
-		<instruction type="language"/>
-		<instruction type="template"/>
-	</instructions>
-
 	<instructions type="install">
 		<instruction type="acpMenu"/>
 		<instruction type="acpTemplate"/>

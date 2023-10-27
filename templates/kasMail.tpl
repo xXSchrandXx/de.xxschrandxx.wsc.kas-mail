@@ -1,19 +1,26 @@
-{include file='header'}
+{capture assign='__contentHeader'}
+	<header class="contentHeader">
+		<div class="contentHeaderTitle">
+			<h1 class="contentTitle">
+				{lang}wcf.page.kasMail.title{/lang}
+			</h1>
+		</div>
 
-<header class="contentHeader">
-	<div class="contentHeaderTitle">
-		<h1 class="contentTitle">{lang}wcf.page.kasMail.title{/lang}</h1>
-	</div>
+		<nav class="contentHeaderNavigation">
+			<ul>
+				{if !$section|isset || $section == 'mail'}
+					{include file='__kasMailResetButtons'}
+				{else}
+					{include file='__kasMaillistResetButtons'}
+				{/if}
 
-	<nav class="contentHeaderNavigation">
-		{if !$section|isset || $section == 'mail'}
-			{include file='__kasMailResetButtons'}
-		{else}
-			{include file='__kasMaillistResetButtons'}
-		{/if}
-		{event name='contentHeaderNavigation'}
-	</nav>
-</header>
+				{event name='contentHeaderNavigation'}
+			</ul>
+		</nav>
+	</header>
+{/capture}
+
+{include file='header' contentHeader=$__contentHeader}
 
 <div class="section sectionContainerList">
 	<nav class="tabMenu">
@@ -33,30 +40,32 @@
 
 	{if !$section|isset || $section == 'mail'}
 		{if $mails|count}
-			<table class="table">
-				<thead>
-					<tr>
-						<th>{lang}wcf.page.kasMail.mail_adresses{/lang}</th>
-						<th>{lang}wcf.page.kasMail.mail_login{/lang}</th>
-						<th>{lang}wcf.page.kasMail.mail_password{/lang}</th>
-					</tr>
-				</thead>
-				<tbody>
-					{foreach from=$mails item=mail}
+			<div class="section tabularBox">
+				<table class="table">
+					<thead>
 						<tr>
-							<td class="columnTitle">{$mail['mail_adresses']}</td>
-							<td class="columnText">{$mail['mail_login']}</td>
-							<td class="columnText">{$mail['mail_password']}</td>
+							<th>{lang}wcf.page.kasMail.mail_adresses{/lang}</th>
+							<th>{lang}wcf.page.kasMail.mail_login{/lang}</th>
+							<th>{lang}wcf.page.kasMail.mail_password{/lang}</th>
 						</tr>
-					{/foreach}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{foreach from=$mails item=mail}
+							<tr>
+								<td class="columnTitle">{$mail['mail_adresses']}</td>
+								<td class="columnText">{$mail['mail_login']}</td>
+								<td class="columnText">{$mail['mail_password']}</td>
+							</tr>
+						{/foreach}
+					</tbody>
+				</table>
+			</div>
 		{else}
 			<p class="info">{lang}wcf.global.noItems{/lang}</p>
 		{/if}
 	{else}
 		{if $maillists|count}
-			<div class="section">
+			<div class="section tabularBox">
 				<table class="table">
 					<thead>
 						<tr>

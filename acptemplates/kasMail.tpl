@@ -33,51 +33,53 @@
 
 	{if !$section|isset || $section == 'mail'}
 		{if $mails|count}
-			<table class="table">
-				<thead>
-					<tr>
-						<th></th>
-						<th>{lang}wcf.acp.page.kasMail.mail_adresses{/lang}</th>
-						<th>{lang}wcf.acp.page.kasMail.mail_login{/lang}</th>
-						<th>{lang}wcf.acp.page.kasMail.mail_password{/lang}</th>
-					</tr>
-				</thead>
-				<tbody>
-					{foreach from=$mails item=mail}
+			<div class="section tabularBox">
+				<table class="table">
+					<thead>
 						<tr>
-							<td class="columnIcon">
-								<a href="{link controller='KasMailEdit' mail_login=$mail['mail_login']}{/link}"
-									title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
-									<span class="icon icon16 fa-pencil"></span>
-								</a>
-								<a 
-									title="{lang}wcf.global.button.delete{/lang}" 
-									class="jsTooltip" 
-									onclick="
-										WCF.System.Confirmation.show('{jslang}wcf.acp.kasMail.delete.sure{/jslang}', $.proxy(function (action) {
-											if (action == 'confirm')
-												window.location.href = $(this).attr('href');
-										}, this));
-										return false;
-									" 
-									href="{link controller='KasMailDelete' mail_login=$mail['mail_login']}{/link}">
-										<span class="icon icon16 fa-times"></span>
-								</a>
-								{event name='rowButtons'}
-							</td>
-							<td class="columnTitle">{$mail['mail_adresses']}</td>
-							<td class="columnText">{$mail['mail_login']}</td>
-							<td class="columnText">{$mail['mail_password']}</td>
+							<th></th>
+							<th>{lang}wcf.acp.page.kasMail.mail_adresses{/lang}</th>
+							<th>{lang}wcf.acp.page.kasMail.mail_login{/lang}</th>
+							<th>{lang}wcf.acp.page.kasMail.mail_password{/lang}</th>
 						</tr>
-					{/foreach}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{foreach from=$mails item=mail}
+							<tr>
+								<td class="columnIcon">
+									<a href="{link controller='KasMailEdit' mail_login=$mail['mail_login']}{/link}"
+										title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip">
+										{icon name='pencil'}
+									</a>
+									<a 
+										title="{lang}wcf.global.button.delete{/lang}" 
+										class="jsTooltip" 
+										onclick="
+											WCF.System.Confirmation.show('{jslang}wcf.acp.kasMail.delete.sure{/jslang}', $.proxy(function (action) {
+												if (action == 'confirm')
+													window.location.href = $(this).attr('href');
+											}, this));
+											return false;
+										" 
+										href="{link controller='KasMailDelete' mail_login=$mail['mail_login']}{/link}">
+											{icon name='times'}
+									</a>
+									{event name='rowButtons'}
+								</td>
+								<td class="columnTitle">{$mail['mail_adresses']}</td>
+								<td class="columnText">{$mail['mail_login']}</td>
+								<td class="columnText">{$mail['mail_password']}</td>
+							</tr>
+						{/foreach}
+					</tbody>
+				</table>
+			</div>
 		{else}
 			<p class="info">{lang}wcf.global.noItems{/lang}</p>
 		{/if}
 	{else}
 		{if $maillists|count}
-			<div class="section">
+			<div class="section tabularBox">
 				<table class="table">
 					<thead>
 						<tr>

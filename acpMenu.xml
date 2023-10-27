@@ -11,7 +11,7 @@
 			<controller>wcf\acp\form\KasMailAddForm</controller>
 			<parent>wcf.acp.menu.link.configuration.kas.kasMailPage</parent>
 			<permissions>admin.kas.canManageMails</permissions>
-			<icon>fa-plus</icon>
+			<icon>plus</icon>
 		</acpmenuitem>
 	</import>
 </data>

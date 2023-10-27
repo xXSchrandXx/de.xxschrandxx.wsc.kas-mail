@@ -9,7 +9,7 @@
 				return false;
 			" 
 			href="{link controller='KasMaillistResetList'}{/link}" class="button">
-				<span class="icon icon16 fa-refresh"></span>
+				{icon name='refresh'}
 				<span>{lang}wcf.acp.page.kasMail.button.list.clear{/lang}</span>
 		</a>
 	</li>
